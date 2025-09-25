@@ -61,3 +61,52 @@ GET /transactions: Returns all transactions (joins Order & Order Status) with pa
 GET /transactions/school/:schoolId: Returns transactions filtered by school
 
 GET /transaction-status/:custom_order_id: Returns transaction status
+status
+
+🖥 Frontend Setup
+
+Initialize React project:
+
+# Using Vite
+npm create vite@latest edviron-frontend
+cd edviron-frontend
+npm install
+
+
+Install styling and navigation libraries:
+
+npm install axios react-router-dom tailwindcss
+
+Core Features
+
+Dashboard Pages: Transaction Overview, Transaction Details by School, Transaction Status Check
+
+Sorting & Filtering: Columns sortable, filters persisted in URL
+
+API Integration: Axios calls to backend endpoints
+
+✅ Additional Notes
+
+Validation & Error Handling: Use class-validator (NestJS) or Express middleware
+
+Security: JWT auth, input sanitization, HTTPS, CORS
+
+Performance: Pagination, sorting, and MongoDB indexing for school_id, custom_order_id, collect_id
+
+Logging: Log webhook events and failed transactions for debugging
+
+🧩 Submission Guidelines
+
+Host project on cloud (Heroku, AWS, etc.)
+
+Push code to GitHub repository with .env.example
+
+Include README with setup instructions and API usage
+
+Provide Postman collection for testing
+
+Share hosted URL and GitHub repository link
+
+📄 References
+
+Payment API Docs
