@@ -1,0 +1,100 @@
+/* register.css - Styling for Register Page */
+
+
+
+.register-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  background-color: #111214;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.register-container h2 {
+  color: #00aaff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.register-container p {
+  color: #c5c6c7;
+  margin-bottom: 1.5rem;
+}
+
+.register-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.register-container input {
+  width: 90%;
+  padding: 0.8rem;
+  /* slightly taller input */
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #222;
+  background-color: #1b1c1f;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.register-container input::placeholder {
+  color: #888;
+}
+
+.register-container button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-container button:hover {
+  background-color: #0088cc;
+  text-decoration: underline;
+
+}
+
+.login-link h5 span {
+  color: #00aaff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-link h5 span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+/* Role & School ID dropdown styling to match input theme */
+.register-container select {
+  width: 100%;
+  padding: 0.8rem; /* same as input */
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #222;
+  background-color: #1b1c1f; /* dark background like input */
+  color: #fff;
+  font-size: 1rem;
+  appearance: none; /* remove default arrow styling */
+}
+
+.register-container select option {
+  background-color: #1b1c1f;
+  color: #fff;
+}
+
+.register-container select:focus {
+  outline: none;
+  border: 1px solid #00aaff; /* blue accent on focus */
+}

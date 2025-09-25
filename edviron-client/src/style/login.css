@@ -1,0 +1,74 @@
+/* login.css - Black & Blue theme */
+
+.login-container {
+  max-width: 350px;
+  margin: 3rem auto;
+  background-color: #111214;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.login-container h2 {
+  color: #00aaff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.login-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #222;
+  background-color: #1b1c1f;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.login-container input::placeholder {
+  color: #888;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0088cc;
+}
+
+.login-container h5 {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: normal;
+  color: #c5c6c7;
+}
+
+.login-container h5 span {
+  color: #00aaff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-container h5 span:hover {
+  text-decoration: underline;
+    cursor: pointer;
+
+}

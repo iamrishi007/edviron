@@ -1,0 +1,147 @@
+.dashboard-container {
+  display: flex;
+  min-height: 90vh;
+  background-color: #0b0c10;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #111214;
+  border-right: 1px solid #222;
+  padding: 1rem;
+}
+
+.sidebar h3 {
+  color: #00aaff;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  color: #00aaff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem 2rem;
+  overflow-y: auto;
+}
+
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #222;
+  background-color: #1b1c1f;
+  color: #fff;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #222;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.transaction-table th {
+  background-color: #111214;
+  color: #00aaff;
+}
+
+.transaction-table tbody tr:hover {
+  background-color: #22272a;
+}
+
+.payment-section {
+  background-color: #111214;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.payment-section h2 {
+  color: #00aaff;
+  margin-bottom: 1rem;
+}
+
+.payment-section form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #222;
+  background-color: #1b1c1f;
+  color: #fff;
+}
+
+.payment-section form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment-section form button:hover {
+  background-color: #0088cc;
+}
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.pagination button {
+  background-color: #121212; /* dark black background */
+  color: #00bfff; /* bright blue text */
+  border: 1px solid #00bfff;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #00bfff; /* blue background on hover */
+  color: #121212; /* black text on hover */
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #00bfff; /* blue active page */
+  color: #121212; /* black text */
+  font-weight: bold;
+}
