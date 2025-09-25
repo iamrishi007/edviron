@@ -6,45 +6,56 @@ A microservice-based application to manage school payments and transactions, pro
 
 ## 🚀 Project Overview
 
-- **Backend:** Node.js with NestJS (or Express/Fastify alternative)
-- **Frontend:** React.js with Tailwind CSS or preferred UI framework
-- **Database:** MongoDB Atlas
-- **Authentication:** JWT-based for API security
-- **Payment Gateway Integration:** Supports create-payment flow and webhook updates
-- **Features:** Transaction management, status checking, school-specific views, webhook logging
+- **Backend:** Node.js with NestJS (or Express/Fastify alternative)  
+- **Frontend:** React.js with Tailwind CSS or preferred UI framework  
+- **Database:** MongoDB Atlas  
+- **Authentication:** JWT-based for API security  
+- **Payment Gateway Integration:** Supports create-payment flow and webhook updates  
+- **Features:** Transaction management, status checking, school-specific views, webhook logging  
 
 ---
 
-## 📦 Backend Setup
+## 📦 Project Setup
 
-### 1. Initialize Project
+### 1. Backend Setup
+Initialize project using NestJS or Express:
+
 ```bash
-# Using NestJS CLI (optional)
+# NestJS
 nest new edviron-backend
 
-# OR using Express
+# OR Express
 npm init -y
 npm install express mongoose dotenv jsonwebtoken axios
-
 
 MONGO_URI=<Your MongoDB Atlas URI>
 JWT_SECRET=<Your JWT secret>
 JWT_EXPIRY=3600
-PAYMENT_API_KEY=<API Key>
+PAYMENT_API_KEY=<Your Payment API Key>
 PAYMENT_PG_KEY=edvtest01
+SCHOOL_ID=<Your School ID>
+
+
+2. Database Schemas
+
+Order Schema: _id, school_id, trustee_id, student_info{name,id,email}, gateway_name
+
+Order Status Schema: collect_id(ref to Order), order_amount, transaction_amount, payment_mode, payment_details, bank_reference, payment_message, status, error_message, payment_time
+
+Webhook Logs Schema: stores webhook events for auditing
+
+User Schema: login credentials for JWT authentication
 
 
 
-Core Features
+API Endpoints
 
-Dashboard Pages
+POST /create-payment: Accepts payment details, calls external payment API, generates JWT-signed payload, redirects user to payment page
 
-Transaction Overview (paginated, searchable, filterable by status & school ID)
+POST /webhook: Updates order status using payload
 
-Transaction Details by School
+GET /transactions: Returns all transactions (joins Order & Order Status) with pagination and sorting
 
-Transaction Status Check (via custom_order_id)
+GET /transactions/school/:schoolId: Returns transactions filtered by school
 
-Sorting & Filtering: Columns sortable, filters persisted in URL
-
-API Integration: Axios for backend communication
+GET /transaction-status/:custom_order_id: Returns transaction status
